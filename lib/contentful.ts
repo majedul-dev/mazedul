@@ -1,8 +1,8 @@
 import { createClient, Entry } from 'contentful';
 
-const client = createClient({
-    space: 'h9ymhx11d890',
-    accessToken: 'oVK60VtjzOc6yGlmxgyOPenVvDGbNb3epGuppEZiz_8'
+export const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN as string
   });
 
   interface Fields {
@@ -16,7 +16,7 @@ const client = createClient({
   }
   
   export async function fetchEntries(): Promise<Entry<Fields>[]> {
-    const entries = await client.getEntries<Fields>();
+    const entries = await client.getEntries<Fields>({content_type: 'projects'});
     return entries.items;
   }
   

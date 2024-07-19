@@ -107,10 +107,10 @@ p {
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h3 {
     font-size: 1.75rem;
@@ -1163,4 +1163,33 @@ p {
   .about-stack p {
     font-size: 0.6rem;
   }
+}
+
+/* styles.css */
+.contentful-paragraph {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.contentful-heading {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #f0f0f0;
+}
+
+.contentful-image {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutproject {
+  max-width: 768px !important;
+}
+.contentful-thumbnail {
+  max-height: 400px;
+  margin: 2em 0;
 }
